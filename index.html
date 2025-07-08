@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=(), ambient-light-sensor=(), camera=(), geolocation=(), microphone=()">
+    
+    <title>CONVER PERU - Certificación Profesional Avanzada</title>
+    
+    <meta property="og:title" content="CONVER PERU - Certificación Profesional Avanzada">
+    <meta property="og:description" content="Eleva tu futuro profesional con certificaciones de impacto. Programas y diplomados diseñados para el mercado actual.">
+    <meta property="og:image" content="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "CONVER PERU",
+      "url": "https://converperu.edu.pe",
+      "logo": "https://i.imgur.com/W8zbo72.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+51-1-987654321",
+        "contactType": "Customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal 123",
+        "addressLocality": "Lima",
+        "addressCountry": "Perú"
+      }
+    }
+    </script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0a2c4e;
+            --secondary-color: #00a65a;
+            --accent-color: #ff6b00;
+            --bg-color: #f8f9fa;
+            --bg-light: #ffffff;
+            --text-color: #333;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --font-family: 'Be Vietnam Pro', sans-serif;
+            --border-radius: 12px;
+            --transition-speed: 0.3s;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        /* --- Estilos del Sistema de Carga --- */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-logo {
+            max-width: 150px;
+            margin-bottom: 2rem;
+            animation: pulse-logo 2s infinite ease-in-out;
+        }
+
+        .preloader-dots span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            margin: 0 5px;
+            animation: bounce-dots 1.4s infinite ease-in-out both;
+        }
+
+        .preloader-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .preloader-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes pulse-logo {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes bounce-dots {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+        
+        body.loading main, body.loading footer, body.loading header {
+            opacity: 0;
+        }
+
+        body.loaded main, body.loaded footer, body.loaded header {
+            animation: fadeInContent 0.8s ease forwards;
+        }
+
+        @keyframes fadeInContent {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: color var(--transition-speed) ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #07223b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(10, 44, 78, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-accent {
+            background: linear-gradient(90deg, var(--accent-color), #ff8c00);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        /* Header / Navbar */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .navbar-brand img {
+            height: 45px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width var(--transition-speed) ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            display: none; /* Hidden by default for desktop */
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #eef3f8 0%, #ffffff 100%);
+            overflow: hidden;
+            position: relative; /* For SVG wave positioning */
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            min-height: 190px;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 550px;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-container img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px var(--shadow-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1;
+            animation: pulse 5s infinite ease-in-out;
+        }
+        .shape-1 {
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 166, 90, 0.1);
+            top: -40px;
+            left: -20px;
+        }
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 107, 0, 0.1);
+            bottom: -50px;
+            right: -50px;
+            animation-delay: 2s;
+        }
+
+        /* Section Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .course-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            font-weight: 600;
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 25px var(--shadow-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .course-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .card-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .card-button {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+        .card-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Modalities Section */
+        .modalities-section {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .modalities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .modality-card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 5px 25px var(--shadow-color);
+            transition: all var(--transition-speed) ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modality-card.featured {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 30px;
+            font-weight: 600;
+            transform: rotate(45deg);
+            font-size: 0.9rem;
+        }
+
+        .modality-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .modality-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .modality-description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .modality-price-tag {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .modality-features {
+            list-style: none;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .modality-features li {
+            color: var(--text-light);
+        }
+
+        .modality-features i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .contact-form {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            transition: border-color var(--transition-speed) ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
+        }
+
+        /* Google Maps Container */
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            height: 300px;
+        }
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .map-info {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        /* About Us Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .about-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .mission-vision {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .mission-vision div {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .mission-vision h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mission-vision i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        .main-footer-section {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .footer-brand img { height: 40px; }
+
+        .footer-description {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all var(--transition-speed) ease;
+        }
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col ul a, .footer-col ul li {
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-speed) ease;
+        }
+        .footer-col ul a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.05);
+            color: white;
+            transition: all var(--transition-speed) ease;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-copyright .fa-heart {
+            color: var(--accent-color);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            max-width: 900px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform var(--transition-speed) ease;
+        }
+        .modal-overlay.show .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .modal-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        .modal-info {
+            padding: 40px;
+        }
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .modal-description {
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+        .modal-features {
+            list-style: none;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .modal-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-color);
+        }
+        .modal-features .fa-check-circle {
+            color: var(--secondary-color);
+        }
+        .modal-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        .btn-full {
+            width: 100%;
+            text-align: center;
+        }
+        .btn-full .fab {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar-menu { 
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 79px; /* Ajustado para el borde */
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border-top: 1px solid var(--border-color);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .navbar-menu.show {
+                display: flex;
+            }
+            .navbar-menu .nav-link,
+            .navbar-menu .btn {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .navbar-toggler { display: block; }
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-description { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-image-container { margin-top: 40px; }
+            .modal-content { grid-template-columns: 1fr; }
+            .modal-image { height: 250px; }
+            .modal-image img { border-radius: var(--border-radius) var(--border-radius) 0 0; }
+            .about-container { flex-direction: column; }
+            .mission-vision { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                min-height: 150px; 
+            }
+            .course-grid { grid-template-columns: 1fr; }
+            .modalities-container { grid-template-columns: 1fr; }
+            .modality-card.featured { transform: scale(1); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+        }
+
+        /* SVG Animation */
+        .svg-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+
+        /* Canvas Animation */
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body class="loading">
+    <div class="preloader">
+        <img src="https://i.imgur.com/W8zbo72.png" alt="CONVER PERU Cargando..." class="preloader-logo">
+        <div class="preloader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <canvas id="canvas-bg"></canvas>
+    
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">
+                    <img src="https://i.imgur.com/W8zbo72.png" alt="CONVER PERU Logo" loading="lazy">
+                    <span>CONVER PERU</span>
+                </a>
+                <div class="navbar-menu" id="navbar-menu">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#cursos" class="nav-link">Cursos</a>
+                    <a href="#modalidades" class="nav-link">Modalidades</a>
+                    <a href="#nosotros" class="nav-link">Quiénes Somos</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="#" class="btn btn-primary">Matrícula Online</a>
+                </div>
+                <button class="navbar-toggler" id="navbar-toggler" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title animate__animated animate__fadeInDown" id="typed-title"></h1>
+                    <p class="hero-description animate__animated animate__fadeInUp">
+                        Programas y diplomados diseñados para el mercado actual. Obtén tu certificado en 24 horas y destaca en tu carrera.
+                    </p>
+                    <div class="hero-buttons animate__animated animate__fadeInUp">
+                        <a href="#cursos" class="btn btn-accent">Explorar Cursos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://wa.me/51902871820?text=Hola,%20deseo%20más%20información." target="_blank" class="btn btn-secondary">Contactar Asesor</a>
+                    </div>
+                </div>
+                <div class="hero-image-container animate__animated animate__fadeInRight">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo profesional colaborando" class="parallax" loading="eager">
+                    <div class="hero-shape shape-1"></div>
+                    <div class="hero-shape shape-2"></div>
+                </div>
+            </div>
+            
+            <svg class="svg-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+              <path fill="#f8f9fa" fill-opacity="1" d="M0,96L80,117.3C160,139,320,181,480,181.3C640,181,800,139,960,122.7C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
+        </section>
+
+        <section id="cursos" class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-aos="fade-up">Catálogo de Cursos y Programas</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Filtra por categoría y encuentra la especialización perfecta para ti.</p>
+                </div>
+                
+                <div class="course-filters" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="forWork">Para Trabajar</button>
+                    <button class="filter-btn" data-filter="computing">Computación</button>
+                    <button class="filter-btn" data-filter="publicSector">Sector Público</button>
+                </div>
+
+                <div class="course-grid" id="course-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="modalidades" class="modalities-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-aos="fade-up">Modalidades Flexibles para tu Certificación</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Diseñadas para adaptarse a tus necesidades y acelerar tu crecimiento profesional.</p>
+                </div>
+                <div class="modalities-container">
+                    <div class="modality-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="modality-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="modality-title">Cursos de Especialización</h3>
+                        <p class="modality-description">Programas enfocados en habilidades prácticas para una rápida inserción laboral.</p>
+                        <div class="modality-price-tag">Desde S/ 120.00</div>
+                        <ul class="modality-features">
+                            <li><i class="fas fa-check"></i>Certificación en 24 horas</li>
+                            <li><i class="fas fa-check"></i>Material Físico y Virtual</li>
+                            <li><i class="fas fa-check"></i>Asesoría personalizada</li>
+                        </ul>
+                    </div>
+                    <div class="modality-card featured" data-aos="fade-up" data-aos-delay="200">
+                         <div class="featured-badge">Más Popular</div>
+                        <div class="modality-icon"><i class="fas fa-certificate"></i></div>
+                        <h3 class="modality-title">Programas de Especialización</h3>
+                        <p class="modality-description">Profundiza en áreas clave con programas avanzados y casos prácticos reales.</p>
+                        <div class="modality-price-tag">Inversión: S/ 300.00</div>
+                        <ul class="modality-features">
+                            <li><i class="fas fa-check"></i>Certificado de especialista</li>
+                            <li><i class="fas fa-check"></i>Proyectos y networking</li>
+                            <li><i class="fas fa-check"></i>Duración: 3 meses</li>
+                        </ul>
+                    </div>
+                    <div class="modality-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="modality-icon"><i class="fas fa-medal"></i></div>
+                        <h3 class="modality-title">Diplomados de Alto Nivel</h3>
+                        <p class="modality-description">Destaca con una certificación de prestigio y acceso a nuestra bolsa de trabajo.</p>
+                        <div class="modality-price-tag">Inversión: S/ 380.00</div>
+                        <ul class="modality-features">
+                            <li><i class="fas fa-check"></i>Diploma con validez nacional</li>
+                            <li><i class="fas fa-check"></i>Acceso a bolsa de trabajo</li>
+                            <li><i class="fas fa-check"></i>Duración: 6 meses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="nosotros" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-aos="fade-up">Quiénes Somos</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Conoce nuestra historia y compromiso con la educación.</p>
+                </div>
+                
+                <div class="about-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-content">
+                        <p>Conver Peru nace un 17/06/2013 ante la necesidad de jóvenes de capacitarse y actualizarse para apoyar su formación profesional. Posteriormente se realizaron convenios para que los jóvenes puedan acceder a una formación corta y empezar a trabajar y así ayudarse económicamente.</p>
+                        <p>Posteriormente se amplió nuevas áreas laborales como asistente administrativo, asistente secretarial y analista de crédito. Con el paso del tiempo nos solicitaban nuevos campos de formación y dimos origen al área de Computación.</p>
+                        <p>Finalmente, un grupo de trabajadores del sector público nos pidió una nueva área, la capacitación en SIAF, SIGA, Gestión Pública, etc.</p>
+                        <p>En la actualidad seguimos con la formación de personas que desean mejorar su desempeño académico laboral y empresarial y economico.</p>
+                        
+                        <div class="mission-vision">
+                            <div>
+                                <h3><i class="fas fa-bullseye"></i> MISIÓN</h3>
+                                <p>Somos una institución que forma profesionales técnicos emprendedores, altamente empleables, con visión global, basado en un modelo de formación por competencias profesionales y valores, contribuyendo al desarrollo nacional a través de la investigación y la responsabilidad social y ambiental.</p>
+                            </div>
+                            <div>
+                                <h3><i class="fas fa-eye"></i> VISIÓN</h3>
+                                <p>Aspiramos a ser líderes en la formación de profesionales técnicos emprendedores, comprometidos con la sostenibilidad, motivados a investigar, con valores y que enfrentan con éxito las exigencias de un mundo globalizado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo de CONVER PERU">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Estamos listos para guiarte en tu próximo paso profesional.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4" data-aos="fade-right">
+                        <div class="map-info">
+                            <h4 class="mb-3">Oficina Principal (Huancayo)</h4>
+                            <p><strong>Coordinador Académico:</strong> C.P.C Raul V. Limas Guerra</p>
+                            <p><strong>Dirección:</strong> Paseo La Breña 472, Huancayo</p>
+                            <p><strong>Celular:</strong> 978 926 26 - 212 018</p>
+                            <p><strong>Email:</strong> litolimas@hotmail.com</p>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.378774789524!2d-75.21045068518776!3d-12.078439991489745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e964177631383%3A0x6056557688aa3811!2sPaseo%20La%20Bre%C3%B1a%20472%2C%20Huancayo%2012001!5e0!3m2!1ses!2spe!4v1672545638971!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4" data-aos="fade-left">
+                        <div class="map-info">
+                            <h4 class="mb-3">Sucursal (El Tambo)</h4>
+                            <p><strong>Coordinador Académico:</strong> Jose Dino Sanchez Villanes</p>
+                            <p><strong>Dirección:</strong> Lobato 344, El Tambo</p>
+                            <p><strong>Celular:</strong> 954 472 651 - 229 563</p>
+                            <p><strong>Email:</strong> dino_x7000@hotmail.com</p>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.73024845508!2d-75.21098698518804!3d-12.053835091505963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e9668747c3f3b%3A0x59905c1d6b054452!2sJir%C3%B3n%20Francisco%20Lobato%20344%2C%20El%20Tambo%2012007!5e0!3m2!1ses!2spe!4v1672545712345!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="#">
+                        <img src="https://i.imgur.com/W8zbo72.png" alt="CONVER PERU Logo" loading="lazy">
+                        <span>CONVER PERU</span>
+                    </a>
+                    <p class="footer-description">Más de 10 años formando profesionales competitivos para el mercado global.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#modalidades">Modalidades</a></li>
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contacto</h4>
+                     <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Paseo La Breña 472, Huancayo</li>
+                        <li><i class="fas fa-phone-alt"></i> (064) 212018</li>
+                        <li><i class="fas fa-envelope"></i> info@converperu.edu.pe</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 8am - 6pm</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p>Recibe noticias sobre nuevos cursos y ofertas especiales.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-accent">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 CONVER PERU. Todos los derechos reservados. Diseñado con <i class="fas fa-heart"></i>.
+            </div>
+        </div>
+    </footer>
+    
+    <div class="modal-overlay" id="course-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="Imagen del curso">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <p id="modal-description" class="modal-description"></p>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> Certificación oficial en 24 horas</li>
+                        <li><i class="fas fa-check-circle"></i> Material de estudio completo</li>
+                        <li><i class="fas fa-check-circle"></i> Acceso a plataforma virtual 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Certificado con código QR de verificación</li>
+                    </ul>
+                    <div class="modal-price" id="modal-price"></div>
+                    <a href="https://wa.me/51902871820" id="modal-whatsapp-btn" target="_blank" class="btn btn-accent btn-full">
+                        <i class="fab fa-whatsapp"></i> Inscribirme por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Lógica del Sistema de Carga ---
+            const preloader = document.querySelector('.preloader');
+            window.addEventListener('load', () => {
+                preloader.classList.add('hidden');
+                document.body.classList.remove('loading');
+                document.body.classList.add('loaded');
+
+                preloader.addEventListener('transitionend', () => {
+                    if (preloader) {
+                       preloader.remove();
+                    }
+                }, { once: true });
+            });
+
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+            
+            // Initialize Typed.js
+            if (document.getElementById('typed-title')) {
+                new Typed('#typed-title', {
+                    strings: [
+                        'Eleva tu Futuro Profesional con Certificaciones de Impacto',
+                        'Transforma tu Carrera con Nuestros Programas Especializados',
+                        'Certificaciones Reconocidas por las Mejores Empresas'
+                    ],
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    backDelay: 3000,
+                    startDelay: 500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }
+            
+            // Initialize SimpleParallax
+            const images = document.querySelectorAll('.parallax');
+            if (images.length > 0) {
+                new simpleParallax(images, {
+                    scale: 1.2,
+                    delay: 0.6,
+                    transition: 'cubic-bezier(0,0,0,1)'
+                });
+            }
+            
+            // Navbar Toggler Functionality
+            const navbarToggler = document.getElementById('navbar-toggler');
+            const navbarMenu = document.getElementById('navbar-menu');
+            if (navbarToggler && navbarMenu) {
+                navbarToggler.addEventListener('click', () => {
+                    navbarMenu.classList.toggle('show');
+                    navbarToggler.setAttribute('aria-expanded', navbarMenu.classList.contains('show'));
+                });
+                // Close navbar menu when a link is clicked (for mobile)
+                navbarMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navbarMenu.classList.contains('show')) {
+                            navbarMenu.classList.remove('show');
+                            navbarToggler.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+            }
+            
+            // Courses Database
+            const courses = {
+                "forWork": [{id: 1, title: "Asistente Contable", description: "Domina los fundamentos contables y herramientas esenciales para la gestión financiera empresarial.", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1911&auto=format&fit=crop", price: "S/ 160.00"},{id: 2, title: "Asistente Administrativo", description: "Desarrolla habilidades clave para la gestión eficiente de oficinas y procesos administrativos.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop", price: "S/ 140.00"},{id: 3, title: "Secretariado Ejecutivo", description: "Capacítate para gestionar agendas, comunicación corporativa y apoyo directivo de alto nivel.", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop", price: "S/ 180.00"},{id: 4, title: "Recursos Humanos", description: "Aprende procesos de selección, capacitación y gestión del talento en organizaciones.", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop", price: "S/ 200.00"}],
+                "computing": [{id: 5, title: "Ofimática Profesional", description: "Maximiza tu productividad dominando Word, Excel y PowerPoint a nivel experto.", image: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2080&auto=format&fit=crop", price: "S/ 120.00"},{id: 6, title: "AutoCAD 2D y 3D", description: "Crea diseños técnicos precisos y modelados tridimensionales con el software líder en la industria.", image: "https://images.unsplash.com/photo-1610986603166-f78428624e76?q=80&w=2058&auto=format&fit=crop", price: "S/ 250.00"},{id: 7, title: "Diseño Gráfico Digital", description: "Domina Photoshop, Illustrator e InDesign para crear piezas gráficas profesionales.", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop", price: "S/ 220.00"},{id: 8, title: "Marketing Digital", description: "Estrategias de SEO, SEM, redes sociales y email marketing para potenciar marcas.", image: "https://images.unsplash.com/photo-1551836022-8b2858c9c69b?q=80&w=2070&auto=format&fit=crop", price: "S/ 280.00"}],
+                "publicSector": [{id: 9, title: "Contrataciones con el Estado (SEACE)", description: "Aprende a participar exitosamente en los procesos de contratación pública del Perú.", image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop", price: "S/ 180.00"},{id: 10, title: "SIAF, SIGA e Invierte.pe", description: "Domina los sistemas integrados de administración financiera y gestión de inversión pública.", image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop", price: "S/ 240.00"},{id: 11, title: "Gestión de Proyectos Públicos", description: "Metodologías para planificar, ejecutar y controlar proyectos de inversión pública.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop", price: "S/ 260.00"},{id: 12, title: "Presupuesto Público", description: "Técnicas de formulación, ejecución y control presupuestario en entidades públicas.", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1911&auto=format&fit=crop", price: "S/ 200.00"}]
+            };
+            
+            // Render and filter courses logic
+            const courseGrid = document.getElementById('course-grid');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            function getCategoryById(id) {
+                for (const category in courses) {
+                    if (courses[category].some(c => c.id == id)) return category;
+                }
+                return null;
+            }
+            
+            function renderCourses(filter = 'all') {
+                if (!courseGrid) return;
+                courseGrid.innerHTML = '';
+                const coursesToRender = (filter === 'all') ? Object.values(courses).flat() : courses[filter];
+                
+                coursesToRender.forEach(course => {
+                    const courseCard = document.createElement('div');
+                    courseCard.className = 'course-card';
+                    courseCard.dataset.aos = "fade-up";
+                    courseCard.innerHTML = `
+                        <div class="card-image"><img src="${course.image}" alt="${course.title}" loading="lazy"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">${course.title}</h3>
+                            <p class="card-description">${course.description}</p>
+                            <div class="card-footer">
+                                <span class="card-price">${course.price}</span>
+                                <button class="card-button" data-id="${course.id}">Ver Detalles</button>
+                            </div>
+                        </div>`;
+                    courseGrid.appendChild(courseCard);
+                });
+                
+                courseGrid.querySelectorAll('.card-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const courseId = e.currentTarget.getAttribute('data-id');
+                        openModal(courseId, getCategoryById(courseId));
+                    });
+                });
+            }
+            
+            if (filterButtons.length > 0) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        document.querySelector('.filter-btn.active').classList.remove('active');
+                        button.classList.add('active');
+                        renderCourses(button.getAttribute('data-filter'));
+                    });
+                });
+            }
+
+            // Modal logic
+            const courseModal = document.getElementById('course-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            function openModal(courseId, category) {
+                if (!courseModal || !category) return;
+                const course = courses[category].find(c => c.id == courseId);
+                if (!course) return;
+                
+                document.getElementById('modal-image').src = course.image;
+                document.getElementById('modal-title').textContent = course.title;
+                document.getElementById('modal-description').textContent = course.description;
+                document.getElementById('modal-price').textContent = course.price;
+                
+                const whatsappLink = `https://wa.me/51902871820?text=Hola%20CONVER%20PERU,%20estoy%20interesado%20en%20el%20curso%20de%20${encodeURIComponent(course.title)}`;
+                document.getElementById('modal-whatsapp-btn').href = whatsappLink;
+                
+                courseModal.classList.add('show');
+            }
+            
+            function closeModal() {
+                if(courseModal) courseModal.classList.remove('show');
+            }
+            
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+            if (courseModal) courseModal.addEventListener('click', (e) => {
+                if (e.target === courseModal) closeModal();
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        return;
+                    }
+                    if (document.querySelector(href)) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                });
+            });
+
+            // Newsletter form handler
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = document.getElementById('newsletter-email');
+                    if (emailInput.value) {
+                        alert('¡Gracias por suscribirte! Recibirás nuestras novedades pronto.');
+                        emailInput.value = '';
+                    }
+                });
+            }
+
+            // CORRECCIÓN: Script funcional para el canvas de fondo
+            const canvas = document.getElementById('canvas-bg');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let particles = [];
+
+                const setCanvasSize = () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                };
+
+                const createParticles = () => {
+                    particles = [];
+                    let particleCount = Math.floor(canvas.width * canvas.height / 25000);
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push({
+                            x: Math.random() * canvas.width,
+                            y: Math.random() * canvas.height,
+                            vx: (Math.random() - 0.5) * 0.5,
+                            vy: (Math.random() - 0.5) * 0.5,
+                            radius: Math.random() * 1.5 + 0.5
+                        });
+                    }
+                };
+
+                const animate = () => {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                    particles.forEach(p => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+
+                        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                    requestAnimationFrame(animate);
+                };
+                
+                window.addEventListener('resize', () => {
+                    setCanvasSize();
+                    createParticles();
+                });
+                
+                setCanvasSize();
+                createParticles();
+                animate();
+            }
+            
+            // Initial render of courses
+            renderCourses();
+        });
+    </script>
+</body>
+</html>
